@@ -53,7 +53,7 @@
 ## Getting Started
 1. Clone this Github repository
 2. Create a virtual environment
-3. `pip install -r requirements.txt`
+3. In the terminal, `pip install -r requirements.txt`
 4. Open MySQLWorkbench and add a connection. Create a database named "ecommerce_api". Edit line 11 of app.py with your MySQL connection username, password, and host (usually localhost)
 5. Open Postman and upload "E-Commerce API.postman_collection.json" to view all routes. Edit host and port if needed.
 6. Run "app.py"
