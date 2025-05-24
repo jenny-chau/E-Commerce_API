@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+<body>
+    {% for e in elements.items %}
+        <p><strong>Product Name:</strong> {{e.product_name}}</p>
+        <p><strong>Price:</strong> ${{e.price}}</p>
+        <br/>
+    {% endfor %}
+
+    {% for page in elements.iter_pages() %}
+        {% if page %}
+            {% if page != elements.page %}
+                <a href="{{url_for('product_routes.get_products_paginate', page_num=page)}}">{{page}}</a>
+            {% else %}
+                <strong>{{page}}</strong>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+</body>
+</html>

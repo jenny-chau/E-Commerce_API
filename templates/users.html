@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+</head>
+<body>
+    {% for user in users.items %}
+        <p><strong>Name:</strong> {{user.name}}</p>
+        <p><strong>Address:</strong> {{user.address}}</p>
+        <p><strong>Email:</strong> {{user.email}}</p>
+        <br/>
+    {% endfor %}
+
+    {% for page in users.iter_pages() %}
+        {% if page %}
+            {% if page != users.page %}
+                <a href="{{url_for('user_routes.get_users_paginate', page_num=page)}}">{{page}}</a>
+            {% else %}
+                <strong>{{page}}</strong>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+</body>
+</html>
