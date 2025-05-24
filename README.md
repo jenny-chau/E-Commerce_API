@@ -29,26 +29,26 @@
 
 ## RESTful endpoints
 - User routes
-    - POST /login: Authenticate user and return a JWT token
-    - POST /users: Create a new user
-    - GET /users: Retrieve all users (protected, admin only)
-    - GET /users/paginate/<page_num>: Retrieve all users paginated (protected, admin only) (only displays name, email, address)
-    - GET /users/<id>: Retrieve a user by ID (protected, admin only)
-    - PUT /users/<id>: Update a user by ID (protected)
-    - DELETE /users/<id>: Delete a user by ID (protected)
+    - **POST /login**: Authenticate user and return a JWT token
+    - **POST /users**: Create a new user
+    - **GET /users**: Retrieve all users (protected, admin only)
+    - **GET /users/paginate/<page_num>**: Retrieve all users paginated (protected, admin only) (only displays name, email, address)
+    - **GET /users/<id>**: Retrieve a user by ID (protected, admin only)
+    - **PUT /users/<id>**: Update a user by ID (protected)
+    - **DELETE /users/<id>**: Delete a user by ID (protected)
 - Product routes
-    - GET /products: Retrieve all products
-    - GET /products/paginate/<page_num>: Retrieve paginated product data - 5 products per page
-    - GET /products/<id>: Retrieve a product by ID
-    - POST /products: Create a new product (protected, admin only)
-    - PUT /products/<id>: Update a product by ID (protected, admin only)
-    - DELETE /products/<id>: Delete a product by ID (protected, admin only)
+    - **GET /products**: Retrieve all products
+    - **GET /products/paginate/<page_num>**: Retrieve paginated product data - 5 products per page
+    - **GET /products/<id>**: Retrieve a product by ID
+    - **POST /products**: Create a new product (protected, admin only)
+    - **PUT /products/<id>**: Update a product by ID (protected, admin only)
+    - **DELETE /products/<id>**: Delete a product by ID (protected, admin only)
 - Order routes
-    - POST /orders: Create a new order (requires user ID and order date in format "YYYY-MM-DD")
-    - PUT /orders/<order_id>/add_product/<product_id>: Add a product to an order (prevent duplicates)
-    - DELETE /orders/<order_id>/remove_product/<product_id>: Remove a product from an order
-    - GET /orders/user/<user_id>: Get all orders for a user
-    - GET /orders/<order_id>/products: Get all products for an order
+    - **POST /orders**: Create a new order (requires user ID and order date in format "YYYY-MM-DD")
+    - **PUT /orders/<order_id>/add_product/<product_id>**: Add a product to an order (prevent duplicates)
+    - **DELETE /orders/<order_id>/remove_product/<product_id>**: Remove a product from an order
+    - **GET /orders/user/<user_id>**: Get all orders for a user
+    - **GET /orders/<order_id>/products**: Get all products for an order
 
 ## Getting Started
 1. Clone this Github repository
